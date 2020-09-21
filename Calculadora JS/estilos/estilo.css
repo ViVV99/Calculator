@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    color: white;
+    background-color: #444;
+
+}
+
+#cabecalho{
+    background-color: #444;
+    padding-left: 25px;
+    margin: 10px;
+    
+    
+}
+
+#corpo{
+    width: 530px;
+    padding: 25px ;
+    margin: auto;
+    box-shadow: 3px 3px 5px rgba(12, 10, 10, 0.589);
+    background: rgb(150, 144, 158);
+}
+
+#resultado{
+    top: 0;
+    position: sticky;
+    z-index: 2
+    padding 0;
+    padding-left: 97px;
+}
+
+#resultado #idinputnumber{
+    border-radius: 17px;
+    padding: 20px 7px;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    
+}
+
+
+
+#areabotoes{
+    padding: 15px;
+    width: 430px;
+    margin: auto;
+    background-color: thistle;
+    display: block;
+    
+}
+
+#areabotoes #operacoes{
+    margin-top: 10px;
+
+}
+
+.botao{
+    font-size: large;
+    font-weight: 800;
+    border: none;
+    outline: none;
+    padding: 39px;
+    margin: 7px;
+}
+
+
+.botao:active{
+    background-color: #666;
+    color: #f5f5f5;
+    
+}
+
+#rodape{
+    margin: auto;
+    border-top: 1px solid #222;
+    padding: 5px;
+    text-align: center;
+
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        width: fit-content;
+        font-size: x-large;
+
+    }
+    #areabotoes{
+        width: 380px;
+    }
+
+   
+    .botao{
+        padding: 43px;
+        font-size: 33px;
+    }
+
+    #resultado{
+        top: 20px;
+    }
+
+}
