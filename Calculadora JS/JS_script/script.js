@@ -29,19 +29,19 @@ function inserir(caixaTexto = "", conteudo = ""){
 
     if( !(/=/.test(input)) ){
 
- 		while(/[^-+xX./0-9]/.test(input)){
- 			input = replaceOcurrence(input ,/[^-+xX./0-9]/, '');
+ 		while(/[^-+xX./0-9()]/.test(input)){
+ 			input = input.replace(/[^-+xX./0-9]/, '');
  		}
  		caixaTexto.value = input;
 
  		while(/([-+xX./]){2,}/.test(input)){
  			console.log(input)
- 			input = replaceOcurrence(input,/([-+xX./]){2,}/,'$1')	 	
+ 			input = input.replace(/([-+xX./]){2,}/,'$1')	 	
  		}
  		caixaTexto.value = input;
 
  	}else {
- 		input = replaceOcurrence(input,/=/,'');
+ 		input = input.replace(/=/,'');
  		caixaTexto.value = arrangeCalc(input);
  	}
 
@@ -128,9 +128,4 @@ function acionarBotao(e){
                 break;
         }
     }
-}
-
-
-function replaceOcurrence(string, regEx, replacement){
-	return string.replace(regEx, replacement);
 }
